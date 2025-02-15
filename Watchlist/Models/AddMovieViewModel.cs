@@ -17,7 +17,7 @@ namespace Watchlist.Models
         public string ImageUrl { get; set; }
 
         [Required]
-        [Range(typeof(decimal), "0.0", "10.0", ConvertValueInInvariantCulture = true)]
+        [Range(0.0, 10.0, ErrorMessage = "Rating must be between 0.0 and 10.0.")]
         public decimal Rating { get; set; }
 
         public int GenreId { get; set; }
